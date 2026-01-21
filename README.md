@@ -53,3 +53,31 @@ Relabeling rules are defined using YAML configuration files, allowing metric tra
 - Prometheus client libraries
 - YAML-based configuration
 - Cloud-native runtime environments
+
+  ## Getting Started (Run From Scratch)
+
+> The following steps demonstrate how to run the GTSPP agent locally and view live metric output.
+
+```bash
+# 1. Install Go (1.20 or higher)
+https://go.dev/dl/
+
+# 2. Clone the repository
+git clone https://github.com/<your-org>/gtssp.git
+cd gtssp
+
+# 3. Initialize dependencies
+go mod tidy
+
+# 4. Configure relabel rules
+# Edit configs/relabel.yaml if required
+
+# 5. Run the agent
+go run cmd/agent/main.go
+
+# 6. Open output dashboard
+http://localhost:8082/output
+
+# 7. (Optional) View Prometheus metrics
+http://localhost:8082/metrics
+

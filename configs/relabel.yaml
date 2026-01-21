@@ -1,0 +1,7 @@
+add_labels:
+  env: staging
+  team: platform
+  region: ap-south-1
+
+rename_labels:
+  instance: host
